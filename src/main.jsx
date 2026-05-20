@@ -1,10 +1,17 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App.jsx'
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import "./index.css";
+// import App from "./App.jsx";
+import "@fontsource/rubik/500.css";
+import "@fontsource/rubik/300.css";
+import "@fontsource/rubik/400.css";
+import "@fontsource/rubik/600.css";
+import "@fontsource/rubik/700.css";
+import { RouterProvider } from "react-router-dom";
+import router from "./routes/routes.jsx";
 
-createRoot(document.getElementById('root')).render(
+createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <App />
+    <RouterProvider router={router} />
   </StrictMode>,
-)
+);
